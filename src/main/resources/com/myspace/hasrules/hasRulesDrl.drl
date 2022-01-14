@@ -1,0 +1,469 @@
+package com.myspace.hasrules;
+import com.myspace.hasrules.hasRulesBo;
+
+ruleflow-group "hasRulesDrl"
+
+rule "level35"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital of Choice"  && hasRulesBo.inputValue=="Any Hospital")
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+rule "level36"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital of Choice"  && hasRulesBo.inputValue=="Comprehensive Network Hospitals")
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+
+rule "level37"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital of Choice"  && hasRulesBo.inputValue=="Restrictive Network Hospitals")
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level38"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital of Choice"  && hasRulesBo.inputValue=="Very Restrictive Network Hospitals")
+
+then
+$hasRulesBo.setScoringValue(2);
+end;
+
+
+rule "level39"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital of Choice"  && hasRulesBo.inputValue=="State Only")
+
+then
+$hasRulesBo.setScoringValue(1);
+end;
+
+rule "level90"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Limit" && hasRulesBo.inputValue=="Unlimited")
+
+then
+$hasRulesBo.setScoringValue(5);
+//$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level91"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Limit" && hasRulesBo.inputValue=="Capped")
+
+then
+//$hasRulesBo.setScoringValue(5);
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level92"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Limit" && hasRulesBo.inputValue=="No Benefit")
+
+then
+$hasRulesBo.setScoringValue(0);
+end;
+
+
+rule "level93"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Co-payment" && hasRulesBo.inputValue=="No co-payments")
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+
+
+rule "level94"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Co-payment" && hasRulesBo.inputValue=="Co-pay on specialised radiology and / or scopes")
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+rule "level95"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Co-payment" && hasRulesBo.inputValue=="Co-pay on specialised radiology and / or scopes and a few others")
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level96"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Co-payment" && hasRulesBo.inputValue=="Co-pays on comprehensive list")
+
+then
+$hasRulesBo.setScoringValue(2);
+end;
+
+
+rule "level44"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="27");
+
+then
+$hasRulesBo.setScoringValue(2);
+end;
+
+
+rule "level45"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="28");
+
+then
+$hasRulesBo.setScoringValue(2);
+end;
+
+
+rule "level46"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="30");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level47"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="31");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level48"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="32");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level49"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="33");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level50"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="34");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+/*rule "level51"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="35");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;*/
+
+
+
+rule "level52"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="36");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level53"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="39");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level543"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="41");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level55"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="43");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level56"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="44");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level57"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="45");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level58"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="46");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level59"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="47");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level60"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="49");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level61"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="54");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level62"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="55");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+
+rule "level63"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="56");
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+
+rule "level64"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="59");
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+
+rule "level65"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="60");
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+
+rule "level66"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="63");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+rule "level67"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="64");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+
+rule "level68"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="69");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+
+rule "level69"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="72");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+rule "level70"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Chronic Conditions Covered" && hasRulesBo.inputValue=="82");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+/*
+rule "level54"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Choice of provider" && hasRulesBo.inputValue=="Free choice - Any provider");
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+*/
+
+rule "level71"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Exclusions" && hasRulesBo.inputValue=="No non-standard exclusions");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+
+rule "level72"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Exclusions" && hasRulesBo.inputValue=="Short list of exclusions");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+rule "level73"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Exclusions" && hasRulesBo.inputValue=="Comprehensive list of exclusions");
+
+then
+$hasRulesBo.setScoringValue(1);
+end;
+
+rule "level74"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Re-imbursement" && hasRulesBo.inputValue=="100%");
+
+then
+$hasRulesBo.setScoringValue(1);
+end;
+
+
+rule "level75"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Re-imbursement"  && hasRulesBo.inputValue=="150%");
+
+then
+$hasRulesBo.setScoringValue(3);
+end;
+
+
+rule "level76"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Re-imbursement"  && hasRulesBo.inputValue=="200%");
+
+then
+$hasRulesBo.setScoringValue(4);
+end;
+
+rule "level77"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Re-imbursement"  && hasRulesBo.inputValue=="300%");
+
+then
+$hasRulesBo.setScoringValue(5);
+end;
+
+rule "level78"
+
+when 
+$hasRulesBo:hasRulesBo(hasRulesBo.scoreName=="Hospital Re-imbursement"  && hasRulesBo.inputValue=="0%");
+
+then
+$hasRulesBo.setScoringValue(0);
+end;
+
